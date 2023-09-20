@@ -47,9 +47,10 @@ function Map() {
     <div className={styles.mapContainer}>
       {!geolocationPosition && (
         <Button type="position" onClick={getPosition}>
-          {isLoadingPosition ? 'Loading...' : 'Use your position'}
+          {isLoadingPosition ? 'Loading...' : 'Center map on your position'}
         </Button>
       )}
+
       <MapContainer
         center={mapPosition}
         zoom={6}
@@ -84,7 +85,10 @@ function ChangeCenter({ position }) {
 function DetectClick() {
   const navigate = useNavigate();
   useMapEvents({
-    click: (e) => navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+    click: (e) =>
+      navigate(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`, {
+        replace: true,
+      }),
   });
 }
 
