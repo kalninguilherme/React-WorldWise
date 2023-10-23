@@ -10,11 +10,11 @@ import {
 
 import styles from './Map.module.css';
 import { useState, useEffect } from 'react';
-import { useCities } from '../contexts/CitiesContext';
-import { useUrlPosition } from '../hooks/useUrlPosition';
-import { useGeolocation } from '../hooks/useGeolocation';
-import FlagEmojiToPNG from '../utils/FlagEmojiToPng';
-import Button from './Button';
+import { useCities } from '../../contexts/CitiesContext';
+import { useUrlPosition } from '../../hooks/useUrlPosition';
+import { useGeolocation } from '../../hooks/useGeolocation';
+import FlagEmojiToPNG from '../../utils/FlagEmojiToPng';
+import Button from '../Button/Button';
 
 function Map() {
   const { cities } = useCities();

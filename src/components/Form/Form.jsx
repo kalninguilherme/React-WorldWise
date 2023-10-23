@@ -3,9 +3,9 @@ import ReactDatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import styles from './Form.module.css';
-import Button from './Button';
-import BackButton from './BackButton';
-import Message from '../Message';
+import Button from '../Button/Button';
+import BackButton from '../Button/BackButton';
+import Message from '../Message/Message';
 import Spinner from '../Spinner/Spinner';
 import FlagEmojiToPNG from '../../utils/FlagEmojiToPng';
 import { useUrlPosition } from '../../hooks/useUrlPosition';
